@@ -98,3 +98,58 @@ body {
 .fade-in {
   animation: fadeIn 1s ease forwards;
 }
+
+/* Add these to your existing App.css */
+
+/* Coffee bean animation */
+@keyframes coffeeFloat {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% { 
+    transform: translateY(-20px) rotate(10deg);
+    opacity: 1;
+  }
+}
+
+/* Enhanced button styles */
+.btn-primary, .btn-secondary {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before, .btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.btn-primary:hover::before, .btn-secondary:hover::before {
+  left: 100%;
+}
+
+/* Enhanced section title */
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #3E2723, #6A1B9A, #3E2723);
+  border-radius: 3px;
+}
