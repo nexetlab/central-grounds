@@ -1,5 +1,5 @@
 .home {
-  padding-top: 80px;
+  padding-top: 10px;
   overflow-x: hidden;
 }
 
@@ -80,7 +80,7 @@
 
 .titleSubline {
   display: block;
-  color: #6A1B9A;
+  color: #EDE0C8;
   font-size: 2.5rem;
   font-weight: 300;
   letter-spacing: 2px;
