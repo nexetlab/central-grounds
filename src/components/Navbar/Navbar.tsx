@@ -5,7 +5,6 @@ import styles from './Navbar.module.css';
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -20,15 +19,10 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     // Close mobile menu when route changes
     setIsMobileMenuOpen(false);
-    setActiveDropdown(null);
   }, [location]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
   const isActiveLink = (path: string) => {
@@ -58,36 +52,14 @@ const Navbar: React.FC = () => {
             <span>Home</span>
           </Link>
           
-          <div className={styles.navItemWithDropdown}>
-            <div 
-              className={`${styles.navLink} ${location.pathname.includes('/menu') ? styles.active : ''}`}
-              onClick={() => toggleDropdown('menu')}
-            >
-              <i className="fas fa-book-open"></i>
-              <span>Menu</span>
-              <i className={`fas fa-chevron-down ${styles.dropdownArrow}`}></i>
-            </div>
-            {activeDropdown === 'menu' && (
-              <div className={styles.dropdownMenu}>
-                <Link to="/menu#cold" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
-                  <i className="fas fa-snowflake"></i>
-                  Cold Beverages
-                </Link>
-                <Link to="/menu#hot" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
-                  <i className="fas fa-mug-hot"></i>
-                  Hot Beverages
-                </Link>
-                <Link to="/menu#acai" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
-                  <i className="fas fa-crown"></i>
-                  Signature Açaí
-                </Link>
-                <Link to="/menu#smoothies" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
-                  <i className="fas fa-blender"></i>
-                  Fresh Smoothies
-                </Link>
-              </div>
-            )}
-          </div>
+          <Link 
+            to="/menu" 
+            className={`${styles.navLink} ${isActiveLink('/menu') ? styles.active : ''}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <i className="fas fa-book-open"></i>
+            <span>Menu</span>
+          </Link>
           
           <Link 
             to="/about" 
@@ -118,10 +90,6 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className={styles.navActions}>
-          <button className={styles.reservationBtn}>
-            <i className="fas fa-calendar-check"></i>
-            <span>Reserve Table</span>
-          </button>
           <div className={styles.hamburger} onClick={toggleMobileMenu}>
             <span className={`${styles.bar} ${isMobileMenuOpen ? styles.active : ''}`}></span>
             <span className={`${styles.bar} ${isMobileMenuOpen ? styles.active : ''}`}></span>
