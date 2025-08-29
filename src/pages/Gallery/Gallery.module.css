@@ -1,0 +1,111 @@
+.gallery {
+  padding: 100px 0;
+}
+
+.filterButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.filterButton {
+  background-color: transparent;
+  border: 2px solid #3E2723;
+  color: #3E2723;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  background-color: #3E2723;
+  color: white;
+}
+
+.filterButton.active {
+  background-color: #6A1B9A;
+  border-color: #6A1B9A;
+  color: white;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.galleryItem {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 250px;
+}
+
+.galleryItem:hover {
+  transform: translateY(-5px);
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(62, 39, 35, 0.8));
+  padding: 20px;
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.galleryItem:hover .imageOverlay {
+  transform: translateY(0);
+}
+
+.imageOverlay h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .filterButtons {
+    gap: 10px;
+  }
+  
+  .filterButton {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .galleryGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .galleryItem {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .galleryItem {
+    height: 250px;
+  }
+}

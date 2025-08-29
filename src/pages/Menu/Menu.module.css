@@ -1,0 +1,187 @@
+.menu {
+  padding: 100px 0 50px;
+}
+
+.menuCategories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.categoryButton {
+  background-color: transparent;
+  border: 2px solid #3E2723;
+  color: #3E2723;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoryButton:hover {
+  background-color: #3E2723;
+  color: white;
+}
+
+.categoryButton.active {
+  background-color: #6A1B9A;
+  border-color: #6A1B9A;
+  color: white;
+}
+
+.menuContent {
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.categorySection {
+  animation: fadeIn 0.5s ease;
+}
+
+.categoryTitle {
+  font-size: 1.8rem;
+  color: #3E2723;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.categoryTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #6A1B9A;
+}
+
+.sizeNote {
+  font-size: 1rem;
+  color: #795548;
+  font-weight: normal;
+}
+
+.recommended {
+  font-size: 1rem;
+  color: #6A1B9A;
+  font-style: italic;
+}
+
+.menuItems {
+  margin-bottom: 40px;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px dashed #D7CCC8;
+}
+
+.menuItem:last-child {
+  border-bottom: none;
+}
+
+.itemInfo h3 {
+  font-size: 1.1rem;
+  color: #3E2723;
+  margin-bottom: 5px;
+}
+
+.itemSizes {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.sizeOption {
+  background-color: #F3E5F5;
+  color: #6A1B9A;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.itemPrice {
+  font-weight: 700;
+  color: #6A1B9A;
+  font-size: 1.1rem;
+}
+
+.extras {
+  background-color: #F9F5F0;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.extras h3 {
+  color: #3E2723;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.extras ul {
+  columns: 2;
+  list-style: none;
+}
+
+.extras li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.extras li::before {
+  content: '•';
+  color: #6A1B9A;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+
+.acaiSection .menuItem {
+  border-bottom-color: #E1BEE7;
+}
+
+.acaiSection .extras {
+  background-color: #F3E5F5;
+}
+
+@media screen and (max-width: 768px) {
+  .menuCategories {
+    gap: 10px;
+  }
+  
+  .categoryButton {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .menuContent {
+    padding: 20px;
+  }
+  
+  .extras ul {
+    columns: 1;
+  }
+  
+  .menuItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .itemPrice {
+    align-self: flex-end;
+  }
+}
