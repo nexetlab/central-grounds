@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
       <div className={styles.navContainer}>
         <Link to="/" className={styles.logo}>
           <div className={styles.logoIcon}>
-            <i className="fas fa-coffee"></i>
+            <img src="/just_logo.svg" alt="Central Grounds Logo" />
           </div>
           <div className={styles.logoText}>
             <span className={styles.logoMain}>Central Grounds</span>

@@ -26,9 +26,7 @@ const Home: React.FC = () => {
           </div>
           <div className={styles.heroVisual}>
             <div className={styles.circleDecoration}></div>
-            <div className={styles.coffeeCup}></div>
-            <div className={styles.coffeeBean}></div>
-            <div className={styles.coffeeBean2}></div>
+            
           </div>
         </div>
         <div className={styles.scrollIndicator}>
@@ -83,40 +81,25 @@ const Home: React.FC = () => {
       </section>
 
       {/* Featured Menu Section */}
-      <section className={styles.featuredMenu}>
-        <div className="container">
-          <h2 className="section-title">Signature Creations</h2>
-          <div className={styles.menuGrid}>
-            <div className={styles.menuItem}>
-              <div className={styles.menuImage} style={{backgroundImage: 'url(https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)'}}></div>
-              <div className={styles.menuContent}>
-                <h3>Artisan Espresso</h3>
-                <p>Our signature blend, carefully roasted to perfection</p>
-                <span className={styles.menuPrice}>From $4.50</span>
-              </div>
-            </div>
-            <div className={styles.menuItem}>
-              <div className={styles.menuImage} style={{backgroundImage: 'url(https://images.unsplash.com/photo-1551782450-17144efb9c50?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)'}}></div>
-              <div className={styles.menuContent}>
-                <h3>Acai Bowls</h3>
-                <p>Nutrient-rich Amazonian acai with fresh toppings</p>
-                <span className={styles.menuPrice}>From $11.00</span>
-              </div>
-            </div>
-            <div className={styles.menuItem}>
-              <div className={styles.menuImage} style={{backgroundImage: 'url(https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80)'}}></div>
-              <div className={styles.menuContent}>
-                <h3>Iced Specialties</h3>
-                <p>Refreshing creations perfect for any time of day</p>
-                <span className={styles.menuPrice}>From $6.50</span>
-              </div>
-            </div>
-          </div>
-          <div className={styles.menuCta}>
-            <Link to="/menu" className="btn-primary">View Full Menu</Link>
-          </div>
-        </div>
-      </section>
+<section className={styles.featuredMenu}>
+  <div className="container">
+    <h2 className="section-title">Signature Creations</h2>
+    <div className={styles.menuGrid}>
+      <div className={styles.menuItem}>
+        <div className={styles.menuImage} style={{backgroundImage: 'url(/dessert_banana_ice_cream.jpeg)'}}></div>
+      </div>
+      <div className={styles.menuItem}>
+        <div className={styles.menuImage} style={{backgroundImage: 'url(/menu_2.jpg)'}}></div>
+      </div>
+      <div className={styles.menuItem}>
+        <div className={styles.menuImage} style={{backgroundImage: 'url(https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80)'}}></div>
+      </div>
+    </div>
+    <div className={styles.menuCta}>
+      <Link to="/menu" className="btn-primary">View Full Menu</Link>
+    </div>
+  </div>
+</section>
 
       {/* Atmosphere Section */}
       <section className={styles.atmosphere}>
@@ -138,7 +121,7 @@ const Home: React.FC = () => {
             <p>Visit us today and discover why we've been the community's favorite since 2015</p>
             <div className={styles.ctaButtons}>
               <Link to="/contact" className="btn-primary">Find Us</Link>
-              <Link to="/menu" className="btn-secondary">Order Online</Link>
+              <Link to="/menu" className="btn-secondary">View Menu</Link>
             </div>
           </div>
         </div>
