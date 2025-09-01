@@ -28,8 +28,12 @@ const About: React.FC = () => {
             </div>
           </div>
           <div className={styles.aboutImage}>
-            <div className={styles.imagePlaceholder}></div>
-          </div>
+            <img 
+              src="/hero.jpg" 
+              alt="About Espresso Bar" 
+              className={styles.imagePlaceholder} 
+            />
+</div>
         </div>
 
         <div className={styles.values}>

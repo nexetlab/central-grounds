@@ -30,14 +30,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/hero.jpg');
+  background: url('/images/Entrance.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.15;
+  opacity: 0.30;
   z-index: -1;
 }
 
 .heroOverlay {
+  pointer-events: none; 
   position: absolute;
   top: 0;
   left: 0;
@@ -248,18 +249,6 @@
   position: relative;
 }
 
-.highlights::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%236a1b9a' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-  opacity: 0.5;
-  z-index: 0;
-}
-
 .highlightsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -346,7 +335,7 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 250px; /* Fixed height for consistency */
+  height: 250px;
 }
 
 .menuItem:hover {
@@ -355,11 +344,11 @@
 }
 
 .menuImage {
-  height: 100%; /* Fill the entire menu item */
+  height: 100%;
   background-size: cover;
   background-position: center;
   position: relative;
-  border-radius: 15px; /* Match the parent border radius */
+  border-radius: 15px;
 }
 
 .menuImage::after {
@@ -370,7 +359,7 @@
   width: 100%;
   height: 30%;
   background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
-  border-radius: 0 0 15px 15px; /* Round only bottom corners */
+  border-radius: 0 0 15px 15px;
 }
 
 .menuCta {
@@ -380,45 +369,52 @@
 
 /* Atmosphere Section */
 .atmosphere {
-  padding: 100px 0;
-  background: linear-gradient(to right, #3E2723 0%, #3E2723 50%, #F9F5F0 50%, #F9F5F0 100%);
+  padding: 100px 20px;
+  background: #3E2723;
 }
 
-.atmosphereContent {
+.atmosphereContainer {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.atmosphereText {
-  flex: 1;
-  padding: 60px;
-  color: #F9F5F0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.atmosphereText h2 {
-  font-size: 2.5rem;
-  margin-bottom: 25px;
-}
-
-.atmosphereText p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  opacity: 0.9;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .atmosphereImage {
   flex: 1;
-  background: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  min-height: 500px;
   background-size: cover;
   background-position: center;
-  min-height: 500px;
-  border-radius: 10px 0 0 10px;
-  box-shadow: -20px 20px 60px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease;
+}
+
+.atmosphereImage:hover {
+  transform: scale(1.02);
+}
+
+.atmosphereText {
+  flex: 1;
+  color: #F9F5F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.atmosphereText h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.atmosphereText p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  opacity: 0.9;
 }
 
 /* CTA Section */
@@ -487,18 +483,19 @@
     height: 150px;
   }
   
-  .atmosphere {
-    background: #3E2723;
-  }
-  
-  .atmosphereContent {
-    flex-direction: column;
+  .atmosphereContainer {
+    flex-direction: column-reverse;
   }
   
   .atmosphereImage {
-    border-radius: 10px;
-    min-height: 400px;
-    margin: 0 20px;
+    width: 100%;
+    min-height: 300px;
+    border-radius: 15px;
+  }
+  
+  .atmosphereText {
+    text-align: center;
+    padding: 20px;
   }
   
   .ctaButtons {
@@ -530,7 +527,7 @@
   }
   
   .atmosphereText {
-    padding: 40px 20px;
+    padding: 20px;
   }
   
   .ctaContent h2 {

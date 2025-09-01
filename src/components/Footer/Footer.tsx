@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
-            <h3 className={styles.footerTitle}>Espresso Bar</h3>
+            <h3 className={styles.footerTitle}>Central Grounds</h3>
             <p className={styles.established}>Worth Visiting Since 2015</p>
             <p className={styles.footerText}>
               Experience the finest coffee in town with our carefully crafted beverages and warm atmosphere.
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={styles.footerBottom}>
-          <p>&copy; {new Date().getFullYear()} Espresso Bar. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Central Grounds. All rights reserved.</p>
         </div>
       </div>
     </footer>

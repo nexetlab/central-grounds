@@ -33,14 +33,17 @@
   align-items: center;
 }
 
-.imagePlaceholder {
+.aboutImage img {
   width: 100%;
-  height: 400px;
-  background: linear-gradient(rgba(106, 27, 154, 0.1), rgba(106, 27, 154, 0.2)), url('https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80');
-  background-size: cover;
-  background-position: center;
+  max-height: 800px; /* Large on desktop */
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.aboutImage img:hover {
+  transform: scale(1.02);
 }
 
 .values {
@@ -93,8 +96,8 @@
     order: -1;
   }
   
-  .imagePlaceholder {
-    height: 300px;
+  .aboutImage img {
+    max-height: 500px; /* Medium for tablets */
   }
 }
 
@@ -105,5 +108,9 @@
   
   .valueCard {
     padding: 20px;
+  }
+  
+  .aboutImage img {
+    max-height: 300px; /* Smaller for mobile */
   }
 }

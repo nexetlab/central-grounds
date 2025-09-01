@@ -92,7 +92,13 @@ const Home: React.FC = () => {
         <div className={styles.menuImage} style={{backgroundImage: 'url(/menu_2.jpg)'}}></div>
       </div>
       <div className={styles.menuItem}>
-        <div className={styles.menuImage} style={{backgroundImage: 'url(https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80)'}}></div>
+        <div className={styles.menuImage} style={{backgroundImage: 'url(/images/homepage.jpg)'}}></div>
+      </div>
+      <div className={styles.menuItem}>
+        <div className={styles.menuImage} style={{backgroundImage: 'url(/images/coffee.jpeg)'}}></div>
+      </div>
+      <div className={styles.menuItem}>
+        <div className={styles.menuImage} style={{backgroundImage: 'url(/images/juice.jpeg)'}}></div>
       </div>
     </div>
     <div className={styles.menuCta}>
@@ -109,7 +115,7 @@ const Home: React.FC = () => {
             <p>Step into our thoughtfully designed space where modern elegance meets cozy comfort. Whether you're meeting colleagues, enjoying a moment alone, or catching up with friends, Central Grounds provides the perfect ambiance.</p>
             <Link to="/gallery" className="btn-secondary">View Gallery</Link>
           </div>
-          <div className={styles.atmosphereImage}></div>
+          <div className={styles.atmosphereImage} style={{ backgroundImage: 'url(/images/entrance.png)' }}></div>
         </div>
       </section>
 
