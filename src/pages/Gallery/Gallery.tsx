@@ -8,13 +8,12 @@ const Gallery: React.FC = () => {
 
   // Gallery items
   const galleryItems = [
-    { id: 1, category: '', src: '/images/Entrance.jpg', title: '', description: '' },
-    { id: 2, category: '', src: '/images/staff.png', title: '', description: '' },
-    { id: 3, category: '', src: '/images/display.jpg', title: 'Display Area', description: 'Showcasing our finest products and specials for visitors.' },
+    { id: 1, category: 'interior', src: '/images/Entrance.jpg', title: '', description: '' },
+    { id: 2, category: 'interior', src: '/images/staff.png', title: '', description: '' },
+    { id: 3, category: 'drinks', src: '/images/display.jpg', title: 'Display Area', description: 'Showcasing our finest products and specials for visitors.' },
     { id: 4, category: 'acai', src: '/images/Acai_Bowl.jpeg', title: 'Açaí Bowl', description: 'Nutrient-packed açaí bowls with fresh toppings.' },
-    { id: 5, category: '', src: '/images/Espresso_Bar_at_Central_Grounds.png', title: '', description: '' },
-    { id: 6, category: '', src: '/images/View.jpg', title: '', description: '' },
-        { id: 6, category: '', src: '/images/juice.jpeg', title: '', description: '' },
+    { id: 5, category: 'interior', src: '/images/Espresso_Bar_at_Central_Grounds.png', title: '', description: '' },
+    { id: 6, category: 'drinks', src: '/images/juice.jpeg', title: '', description: '' },
   ];
 
   // Filter logic
